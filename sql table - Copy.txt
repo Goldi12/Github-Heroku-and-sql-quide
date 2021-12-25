@@ -1,0 +1,109 @@
+#TO CREATE A TABLE
+
+CREATE TABLE products (
+  
+  id INT NOT NULL,
+  name STRING,
+  price MONEY,
+  PRIMARY KEY (id)
+  )
+
+
+#TO ADD PRODUCT IN TABLE
+
+INSERT INTO products
+VALUES (1, "pen", 1.20)
+
+
+#to skip whatever want to skip don't put the name in producst()
+# you can't skipp id
+
+INSERT INTO products (id, name)
+VALUES (2, "pencil")
+
+# TO READ WE USE SELECTOR
+# to select complete table 
+
+SELECT * FROM products
+
+# IF YOU WANT TO ONLY SEE THE PRICE AND NAME 
+
+SELECT name, price FROM products
+
+# IF YOU WANT TO SEE SPECIFIC COLUMN BY ID
+
+SELECT * FROM products WHERE id=1
+
+# BY NAME WHATEVER
+
+SELECT * FROM products WHERE name = "pencil"
+
+#TO UPDATE OR CHANGE SOMETHING 
+
+UPDATE products
+SET price = 12
+WHERE id = 2
+
+# TO ADD NEW COLUMN
+
+ALTER TABLE products
+ADD stock INT
+
+# TO ADD VALUE IN EMPTRY BOX
+
+UPDATE products
+SET stock = 32
+WHERE id = 1
+
+# TO DETELE DATA 
+ DELETE FROM products
+WHERE id = 1
+
+# TO DELETE EVERYTHING
+DELETE FROM products
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# TO LINK ONE TABLE TO ANOTHER TABLE WE USE FOREIGN KEY
+CREATE TABLE orders (
+  id INT NOT NULL,
+  order_number INT,
+  customer_id int,
+  product_id INT,
+  PRIMARY KEY (id),
+  FOREIGN KEY ( customer_id) REFERENCES customers(id),
+  FOREIGN KEY (product_id) REFERENCES products(id)
+  
+  )
+
+
+#LINKING THE TABLE TO EACHOTHER
+SELECT orders.order_number, customers.first_name, customers.last_name, customers.address
+FROM orders	
+INNER JOIN customers ON orders.customer_id = customers.id
+
+
+
+#linking the table to each other
+
+SELECT orders.order_number,products.name, products.price, products.stock
+FROM orders
+INNER JOIN products on orders.customer_id = products.id

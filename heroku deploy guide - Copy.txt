@@ -1,0 +1,36 @@
+upload project to heroku
+#in hyper terminal
+
+heroku login
+
+#go and change port into process.env.PORT    from 3000 
+
+create a Procfile and write
+
+web: node app.js
+
+git init
+git add .
+git commit -m "First Commit"
+heroku create
+git push heroku master
+
+
+
+
+
+
+
+
+to update heroku
+git add .
+
+git commit -m "Change success page h1"
+
+git push heroku master
+
+
+
+
+
+

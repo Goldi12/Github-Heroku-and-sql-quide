@@ -1,0 +1,98 @@
+cd desktop
+mkdir story
+cd story
+touch chapter1.txt  ## hey guys wassup text is written 
+git init
+ls -a        # to look hidden files
+git status  # to know the track or untrack file
+git add chapter1.txt   # to add many chapter at the same time use git add .
+git status
+
+git commit -m "Complete Chapter1"
+git log
+
+
+
+
+
+
+
+
+for uploading on github
+cd desktop
+cd story
+
+go and creat repository on github 
+copy the https code https://github.com/Goldi12/story.git  like this
+
+
+git remote add origin paste  code here git remote add origin https://github.com/Goldi12/story.git
+git push -u origin master
+
+
+6201123878
+
+
+birend ji
+7703819475
+
+
+
+
+process of gitignore
+cd desktop
+mkdir  Project
+cd Project
+touch file1.txt file2.txt file3.txt secrets.txt
+
+ls -a # checout how many hidden files over here
+touch .gitingnore
+start .gitingnore # add the file name you want to be not to add in github
+git init
+git add.
+git status
+
+
+
+
+
+
+for cloning project from github to desktop
+git clone put the https link of that project for intance 
+
+git clon https://github.com/Goldi12/Goldi12-https-github.com-Goldi12Portfolio.git
+
+
+
+
+CREATING NEW BRANCH AND DOING EXPERIMENT
+
+git branch  # to checkout which branch you are right now
+
+git branch alienworld  # you can take any name by the way it is for creating new branch 
+
+git add .
+git commit -m "changing file 1 and 2 whater "
+
+
+git checkout alienworld # for switching from master branch to the alienworld branch 
+
+# git checkout -b cutepie    ## it will create new branch along with switching
+
+
+
+
+to merge master branch with alieworld branch
+# SWITCH TO THE MASTER BRANCH
+
+git merge alienworld 
+
+
+
+
+to updates in github 
+
+git push origin master -u
+
+
+
